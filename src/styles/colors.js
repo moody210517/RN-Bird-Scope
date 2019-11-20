@@ -1,4 +1,5 @@
 const blueVersion = {
+  
   primary: '#47d1a6',
   primaryLight: '#829BF8',
   primaryGradientStart: '#4f44b6',
@@ -18,6 +19,8 @@ const blueVersion = {
   black: '#000000',
   green: '#6DD0A3',
   yellow: '#ffc247',
+  inputTextBackground: '#f5f5f5',
+  light_white:"#fafafa",
 };
 
 export default blueVersion;

@@ -12,7 +12,6 @@ import MainTabNavigator from './MainTabNavigator';
 // import MessagesScreen from '../containers/chat/MessagesScreen';
 // import ChartsScreen from '../containers/ChartsScreen';
 
-import AvailableInFullVersion from '../profile/MyProfile';
 
 import { colors, fonts } from '../../styles';
 
@@ -24,53 +23,26 @@ const stackNavigator = createStackNavigator(
   {
     Main: {
       screen: MainTabNavigator,
-      navigationOptions: () => ({
-        title: 'React Native Starter',
-        headerLeft: null,
-        headerBackground: (
-          <Image
-            style={{
-              flex: 1,
-              width,
-            }}
-            source={headerBackground}
-            resizeMode="cover"
-          />
-        ),
+      navigationOptions: () => ({        
+        header:null
       }),
-    },
-    Profile: {
-      screen: AvailableInFullVersion,
-      navigationOptions: {
-        header: null,
-      },
-    },
-    
-    Article: {
-      screen: AvailableInFullVersion,
-      navigationOptions: {
-        header: null,
-      },
-    },
-    Chat: {
-      screen: AvailableInFullVersion,
-      navigationOptions: {
-        header: null,
-      },
-    },
-    Messages: {
-      screen: AvailableInFullVersion,
-      navigationOptions: {
-        header: null,
-      },
-    },
-    Charts: {
-      screen: AvailableInFullVersion,
-      navigationOptions: {
-        header: null,
-      },
-    },
+    },    
   },
+        // header part
+        // title: 'Birdy Scope',
+        // headerLeft: null,
+        // headerBackground: (
+        //   <Image
+        //     style={{
+        //       flex: 1,
+        //       width,
+        //     }}
+        //     source={headerBackground}
+        //     resizeMode="cover"
+        //   />
+        // ),
+
+
   {
     defaultNavigationOptions: () => ({
 

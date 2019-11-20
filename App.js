@@ -6,8 +6,10 @@ import { Actions, Scene, Router, Stack } from 'react-native-router-flux';
 
 import Login from './src/pages/login';
 import Register from './src/pages/register';
-import MyProfile from './src/pages/profile/MyProfile';
+import ProfileContainer from './src/pages/profile/ProfileContainer';
 import AppView from './src/pages/AppView';
+import SettingContainer from './src/pages/setting/SettingContainer';
+import VideoPlayer from './src/pages/home/VideoPlayer';
 
 export default class App extends React.Component {
   render() {
@@ -15,11 +17,17 @@ export default class App extends React.Component {
       <View style={{flex: 1}}>
         <Router>
           <Stack key="root" duration={0}>
-            <Scene key="Login" hideNavBar={true} component={Login} title="Login" initial = {false} />       
-            <Scene key="Register" hideNavBar={true} component={Register} title="Register" initial = {false} />  
-            <Scene key="MyProfile" hideNavBar={true} component={MyProfile} title="MyProfile" initial = {false} />                              
+                  
+            <Scene key="Login" hideNavBar={true} component={Login} title="Login" initial = {true} />       
             
-            <Scene key="AppView" hideNavBar={true} component={AppView} title="AppView" initial = {true} />  
+            <Scene key="Register" hideNavBar={true} component={Register} title="Register" initial = {false} />  
+            
+            <Scene key="AppView" hideNavBar={true} component={AppView} title="AppView" initial = {false} />  
+            <Scene key="Profile" hideNavBar={true} component={ProfileContainer} title="Profile" initial = {false} />
+            <Scene key="Setting" hideNavBar={true} component={SettingContainer} title="Setting" initial = {false} />
+
+            <Scene key="VideoPlayer" hideNavBar={true} component={VideoPlayer} title="VideoPlayer" initial = {false} />
+
           </Stack>
         </Router>
       </View>

@@ -7,6 +7,7 @@ import TextInput from './TextInput';
 import SegmentedControl from './SegmentedControl';
 import SignButton from './SignButton';
 import SignUpbutton from './SignUpButton';
+import Input from './Input';
 
 export {
   // ## Generator Components Exports
@@ -17,5 +18,6 @@ export {
   TextInput,
   SegmentedControl,
   SignButton,
-  SignUpbutton  
+  SignUpbutton,
+  Input
 };

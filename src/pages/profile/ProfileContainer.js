@@ -1,6 +1,6 @@
 import { compose, withState } from 'recompose';
 
-import GridView from './GridsView';
+import ProfileView from './ProfileView';
 
 const listData = [
   {
@@ -130,4 +130,4 @@ export default compose(
   withState('tabIndex', 'setTabIndex', 0),
   withState('tabs', 'setTabs', ['Unlocked', 'Past games', 'My stats']),
   withState('data', 'setData', listData),
-)(GridView);
+)(ProfileView);

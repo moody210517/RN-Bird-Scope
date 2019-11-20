@@ -12,8 +12,10 @@ export default class Login extends Component{
         password:''
     };    
     onLogin = () =>{
+        Actions.AppView();
     }
-    triggerAddTripState = () =>{
+
+    goToRegister = () =>{
         console.log("download data from server placeholder");
         Actions.Register();
     }
@@ -44,7 +46,7 @@ export default class Login extends Component{
                         <View style={{height:50, marginBottom:20,marginRight:20,marginLeft:20}}>
                         <SignUpButton
                                 title="Create New Account"
-                                onPress={() => {this.triggerAddTripState()} }                                
+                                onPress={() => {this.goToRegister()} }                                
                                 textStyle={{ /* styles for button title */ }}
                             />       
                         </View>
@@ -75,7 +77,7 @@ export default class Login extends Component{
 
                             <SignButton
                                 title="Sign In to My Account"
-                                onPress={() => Alert.alert(`Why you opened me? Go away, it's mine!`)}
+                                onPress={() => {this.onLogin()} }                                                           
                                 style={{ /* some styles for button */ }}
                                 textStyle={{ /* styles for button title */ }}
                             />

@@ -29,6 +29,7 @@ export default function RNSButton(props) {
       styles.button,
       props.small && styles.buttonSmall,
       styles.border,
+
       props.primary && {
         borderColor: colors.primary,
       },
@@ -45,6 +46,7 @@ export default function RNSButton(props) {
       props.small && styles.captionSmall,
       styles.secondaryCaption,
       icon && styles.captionWithIcon,
+      
       props.primary && {
         color: colors.primary,
       },

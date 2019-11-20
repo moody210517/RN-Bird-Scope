@@ -5,13 +5,14 @@ import { createBottomTabNavigator } from 'react-navigation';
 
 import { colors, fonts } from '../../styles';
 
+import ScoreScreen from '../score/Score';
 import HomeScreen from '../home/Home';
-import MyProfile from '../profile/MyProfile';
-import Profile from '../profile/GridsViewContainer';
+import Profile from '../profile/ProfileContainer';
+import SettingScreen from '../setting/SettingContainer';
 
 const weatherIcon = require('../../../assets/menu/menu-weather-icon.png');
 const scoreICon = require('../../../assets/menu/menu-score-icon.png');
-const homeIcon = require('../../../assets/menu/menu-home-icon.png');
+const homeIcon = require('../../../assets/menu/menu_home.png');
 const profileIcon = require('../../../assets/menu/menu-profile-icon.png');
 const settingIcon = require('../../../assets/menu/menu-setting-icon.png');
 
@@ -62,18 +63,14 @@ export default createBottomTabNavigator(
     Weather: {
       screen: HomeScreen,
       navigationOptions: {        
-        header: (          
-          <View style={styles.headerContainer}>
-            <Image style={styles.headerImage} source={hederBackground} />
-            <Text style={styles.headerCaption}>Home</Text>
-          </View>
-        ),
+        header: {
+          visible: false,
+        },
       },
     },
     Score: {
-      screen: MyProfile,
-      navigationOptions: {
-      
+      screen: ScoreScreen,
+      navigationOptions: {      
         header: (
           <View style={styles.headerContainer}>
             <Image style={styles.headerImage} source={hederBackground} />
@@ -93,7 +90,7 @@ export default createBottomTabNavigator(
         ),
       },
     },        
-    MyProfile: {
+    Profile: {
       screen: Profile,
       navigationOptions: () => ({
         title: 'React adsfsdf Starter',
@@ -112,9 +109,9 @@ export default createBottomTabNavigator(
 
     },  
     Setting: {
-      screen: HomeScreen,
+      screen: SettingScreen,
       navigationOptions: () => ({
-        title: 'React Native asdf',
+        title: 'React Native',
         headerLeft: null,
         headerBackground: (
           <Image
@@ -148,7 +145,7 @@ export default createBottomTabNavigator(
           case 'Home':
                 iconSource = homeIcon;
                 break;      
-          case 'MyProfile':
+          case 'Profile':
               iconSource = profileIcon;
               break;       
           case 'Setting':

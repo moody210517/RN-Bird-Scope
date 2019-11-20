@@ -3,6 +3,8 @@ import{StyleSheet,ScrollView,View,ImageBackground,Image ,Text} from 'react-nativ
 
 import Input from '../component/Input';
 import {SignButton} from '../component/SignButton';
+import {Actions} from 'react-native-router-flux';
+
 
 export default class Register extends Component{
     state = {
@@ -81,6 +83,8 @@ export default class Register extends Component{
                                         value={this.state.handicap}
                                         onChangeText={handicap=>this.setState({handicap})}
                                     />
+
+                                    
                                     <View style={{margin:5}} />
                                     <Input 
                                         src="start"
@@ -112,10 +116,9 @@ export default class Register extends Component{
                             />
                             <View style={{marginTop:10}} />
                             
-
                             <SignButton
                                 title="Create Account"
-                                onPress={() => Alert.alert(`Why you opened me? Go away, it's mine!`)}
+                                onPress={() =>  { Actions.AppView() }}
                                 style={{ /* some styles for button */ }}
                                 textStyle={{ /* styles for button title */ }}
                             />
